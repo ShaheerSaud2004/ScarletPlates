@@ -1,4 +1,4 @@
-// File: /Users/yusufelbana/Desktop/nextjs-flask/client/src/app/api/food/route.js
+// File: /Users/arushverma/Desktop/Coding/ScarletPlates/client/src/app/api/food/route.js
 import * as entry from '../../../../../src/app/api/food/route.js'
 import type { NextRequest } from 'next/server.js'
 

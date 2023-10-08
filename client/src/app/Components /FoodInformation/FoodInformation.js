@@ -6,12 +6,13 @@ import axios from 'axios';
 
 
 
-export default function FoodInformation() {
+export default function FoodInformation(props) {
     const [food,setFood] = useState([]);
+    const campus = props.campus;
 
 
     const getFood = async () => {
-      const data = await axios.get('/api/food')
+      const data = await axios.get(`http://127.0.0.1:8080/api/plate?campus=${campus}`)
       const food = await data.data;
       setFood(await food);
       console.log(food)

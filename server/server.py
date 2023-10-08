@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, session, jsonify
 from flask_cors import CORS
 
 import collections as col
@@ -33,24 +33,33 @@ class Food:
             "Sugars": self.sugars,
         }
 
+@app.route('/api/query')
+def query_example():
+    campus = request.args.get('campus')
+    str = f"campus is {campus}"
+    strval = campus
+    session['strval'] = strval
+    return str
 
 
-
-@app.route("/api/home",methods=['GET'])
-def return_home():
-    return jsonify({
-        'status':'ok'
-    })
-    
-@app.route("/api/plate", methods=['GET', 'PUT'])
-
+@app.route("/api/plate", methods=['GET'])
 def plate():
 
-    data = request.get_json()
-    print(data)
+    campus = request.args.get('campus')
+
+    #str_value = session.get('strval', 'No campus data available')
+    #print(str_value)
+    print(campus)
+
+    if campus == "Livi":
+        url =  "http://menuportal.dining.rutgers.edu/FoodPro/pickmenu.asp?sName=Rutgers+University+Dining&locationNum=03&locationName=Livingston+Dining+Commons&naFlag="
+    elif campus == "Busch":
+        url = "http://menuportal.dining.rutgers.edu/FoodPro/pickmenu.asp?sName=Rutgers+University+Dining&locationNum=04&locationName=Busch+Dining+Hall&naFlag=1"
+    else:
+        url =  "http://menuportal.dining.rutgers.edu/FoodPro/pickmenu.asp?sName=Rutgers+University+Dining&locationNum=03&locationName=Livingston+Dining+Commons&naFlag="
 
 
-    url = "http://menuportal.dining.rutgers.edu/FoodPro/pickmenu.asp?sName=Rutgers+University+Dining&locationNum=03&locationName=Livingston+Dining+Commons&naFlag="
+
     page = urlopen(url)
     html = page.read().decode("utf-8")
     soup = BeautifulSoup(html, "html.parser")
@@ -62,6 +71,7 @@ def plate():
             if anchor_element:
                 href_value = anchor_element['href']  # Extract the href attribute value
                 return href_value
+                
                 #print(href_value)
             else:
                 print("No anchor element found.")

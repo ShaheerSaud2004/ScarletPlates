@@ -1,4 +1,4 @@
-// File: /Users/yusufelbana/Desktop/nextjs-flask/client/src/app/layout.js
+// File: /Users/arushverma/Desktop/Coding/ScarletPlates/client/src/app/layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: /Users/yusufelbana/Desktop/nextjs-flask/client/src/app/[campus]/page.js
+// File: /Users/arushverma/Desktop/Coding/ScarletPlates/client/src/app/[campus]/page.js
 import * as entry from '../../../../src/app/[campus]/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
