@@ -1,0 +1,147 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Components /NavBar/NavBar.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.NavBar_nav_container__TzXg5 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    color: black;
+ 
+}
+
+.NavBar_menu_container__i_jsF {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #F78CA2;
+    display: grid;
+    place-items:center;
+    position: fixed;
+}
+.NavBar_menu_box__id_oU {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+
+.NavBar_title__JhBSp h3 {
+    font-size: 2rem;
+}
+
+.NavBar_bars__icpDx {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1rem 0rem 0rem 
+}
+@media screen and (max-width: 900px) {
+    .NavBar_menu_container__i_jsF {
+        width: 100vw;
+    }
+}
+
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Components /Hero/Hero.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+.Hero_hero_container__M8ZFS {
+    display: grid;
+    grid-template-rows:repeat(3,1fr) ;
+
+    background: linear-gradient(180deg, #C70039 0%, rgb(56, 8, 8) 100%);
+    height: 100vh;  
+    color: white;
+  background-color: #F7F3F0;
+      
+}
+
+.Hero_row__P2oft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.Hero_hero_row__HOOlY {
+    
+    color: white;
+   font-size: 6rem;
+}
+
+.Hero_letters__XZ6vq {
+    display: inline-block;
+}
+
+.Hero_hero_center___PNIS {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Hero_top_title__Ta64v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.Hero_center_column__zXqmf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.Hero_center_column__zXqmf button{
+    background-color: #c40038;
+   width: 40rem;
+    color: white;
+    padding: 1.5rem 0.8rem;
+    border-radius: 1rem;
+    border: none;
+
+
+}
+
+.Hero_hero_bottom__D0JqH {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Hero_circle_column___Sakp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+.Hero_circle__va0YO {
+    background-color: #c40038;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Components /Loading/Loading.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+.Loading_loading_container__leLb9 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, #C70039 0%, rgb(56, 8, 8) 100%);
+}

@@ -1,7 +1,7 @@
 'use client';
 import styles from './Hero.module.css'
 import {AnimatePresence, easeIn, motion} from 'framer-motion'
-import CircleSideBar from '../CircleSideBar/CircleSideBar';
+import Link from 'next/link';
 import rutgers from '/public/rutgers.png'
 import Image from 'next/image';
 import NavBar from '../NavBar/NavBar';
@@ -69,29 +69,67 @@ const AnimatedLetters = ({title}) => {
     )
 }
 
+const Circle = ({letters, title }) => {
+    return (
+        <div className={styles.circle}>
+            <h3>{letters}</h3>
+        </div>
+    )
+}
+
 export default function Hero() {
     const [button,setButton] = useState(false);
     return (
     <div className={styles.hero_container}>
-        <NavBar/>
-       
+        <div className={styles.hero_top}>
+        <NavBar/>  
         <motion.div className={styles.hero_row}>
         <TopRow title={"SCARLET PLATES"}/>
         </motion.div>
+        </div>
         
        
-        <div className={styles.center}>
-        <h3>SCARLET SERVED FLAVOR DESERVED</h3>
-            <button onClick={()=>{setButton(!button)}}>Choose Your Campus</button>
-            {button ?  <div className={styles.campus_menu}>
-        <p>College Avenue</p>
-        <p>Livingston</p>
-        <p>Busch</p>
-        <p>Cook Douglas</p>
-      </div>: ""}
+        <div className={styles.hero_center}>
+
+<AnimatePresence mode='sync'>
+    
+        <motion.div className={styles.plate}
+       layoutId="plate"
+       initial={{opacity:0.25}} animate={{opacity:1}} transition={{ duration:1, ease:[0.5, 0.02, 0.01, 0.95]} }
+       >
+        
+        <Image src={rutgers} width={200} height={200}/>
+       </motion.div>
+</AnimatePresence>
+
+<div className={styles.center_column}>
+<h3>Scarlet Served Flavor Deserved</h3>
+<button>Choose Your Campus</button>
+</div>
+
+<div
+       >
+        
+        <Image src={rutgers} width={200} height={200}/>
+       </div>
+
+
+
+        
         </div>
 
     
+        <div className={styles.hero_bottom}>
+        <Link href={{pathname:'/livingston', query:{campus:'Livi'}}}><Circle  letters={"LV"}/></Link>
+        <Link href={{pathname:'/busch', query:{campus:'Busch'}}}><Circle  letters={"BU"}/></Link>
+        <Link href={{pathname:'/collegeave', query:{campus:'CollegeAve'}}}><Circle  letters={"CA"}/></Link>
+        <Link href={{pathname:'/cookdouglas', query:{campus:'CookDoug'}}}><Circle letters={"CD"}/></Link>
+
+        </div>
+
+
+
+
     </div>
     )
 }

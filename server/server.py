@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 import collections as col
@@ -42,8 +42,14 @@ def return_home():
         'status':'ok'
     })
     
-@app.route("/api/plate", methods=['GET'])
+@app.route("/api/plate", methods=['GET', 'PUT'])
+
 def plate():
+
+    data = request.get_json()
+    print(data)
+
+
     url = "http://menuportal.dining.rutgers.edu/FoodPro/pickmenu.asp?sName=Rutgers+University+Dining&locationNum=03&locationName=Livingston+Dining+Commons&naFlag="
     page = urlopen(url)
     html = page.read().decode("utf-8")

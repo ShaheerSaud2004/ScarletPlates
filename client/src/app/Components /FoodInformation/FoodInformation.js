@@ -21,7 +21,10 @@ export default function FoodInformation() {
 
   useEffect(()=> {
     getFood();
+    
   },[])
+
+  
     return (
        <div>
         {food?.map((food,index) => {
