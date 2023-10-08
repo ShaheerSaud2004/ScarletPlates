@@ -177,11 +177,11 @@ def plate():
     foods_list_of_dicts = [food.to_dict() for food in allFoodsList]
 
     # Convert the list of dictionaries to JSON
-    foods_json = json.dumps(foods_list_of_dicts, indent=4)
+    #foods_json = json.dumps(foods_list_of_dicts, indent=4)
 
     # Print the JSON representation of the list of foods
     #print(foods_json)
-    return jsonify(foods_json)
+    return jsonify(foods_list_of_dicts)
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
