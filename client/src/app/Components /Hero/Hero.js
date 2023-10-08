@@ -82,7 +82,7 @@ export default function Hero() {
        
         <div className={styles.center}>
         <h3>SCARLET SERVED FLAVOR DESERVED</h3>
-            <button onClick={()=>{setButton(!button)}}>START MEAL PLANNING</button>
+            <button onClick={()=>{setButton(!button)}}>Choose Your Campus</button>
             {button ?  <div className={styles.campus_menu}>
         <p>College Avenue</p>
         <p>Livingston</p>

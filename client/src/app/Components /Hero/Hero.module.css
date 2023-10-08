@@ -63,12 +63,12 @@
     background-color: #C70039;
     color: white;
     display: flex;
-    flex-direction: column;
+   
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    gap: 1rem;
-    width: 10rem;
+    gap: 4rem;
+    width: fit-content;
     height: 10rem;
 }
 @media screen and (width >= 900px) {
